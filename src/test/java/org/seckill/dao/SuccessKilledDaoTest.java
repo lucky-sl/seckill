@@ -23,7 +23,7 @@ public class SuccessKilledDaoTest {
     @Test
     public void insertSuccessKilled() throws Exception {
         long id = 1001L;
-        long phone = 13161850425L;
+        long phone = 13161850421L;
         int insertCount = successKilledDao.insertSuccessKilled(id,phone);
         System.out.println("insertCount="+insertCount);
     }
