@@ -21,7 +21,7 @@
     </select>
 
     <select id="queryAll" resultType="SecKill" parameterType="int">
-        SELECT seckill_id,name,number,end_time,create_time from seckill
+        SELECT seckill_id,name,number,start_time,end_time,create_time from seckill
         order by create_time desc
         limit #{offset},#{limit}
     </select>

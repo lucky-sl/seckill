@@ -19,6 +19,7 @@
       <configuration>
         <fileset id="fileset" name="Spring Application Context" removed="false">
           <file>file://$MODULE_DIR$/src/main/resources/spring/spring-dao.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring/spring-service.xml</file>
         </fileset>
       </configuration>
     </facet>
@@ -31,6 +32,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/webapp" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
