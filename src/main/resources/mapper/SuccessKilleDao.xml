@@ -2,24 +2,24 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.seckill.dao.SuccessKilledDao">
+<mapper namespace="org.seckill.dao.SuccesskilledDao">
 
     <!-- 主键冲突不报错 -->
     <insert id="insertSuccessKilled">
-        insert ignore into success_killed(seckill_id,user_phone,state) values (#{secKillId},#{userPhone},0)
+        insert ignore into success_killed(seckill_id,user_phone,state) values (#{seckillId},#{userPhone},0)
     </insert>
 
-    <select id="queryByIdWithSecKill" resultType="SuccessKilled">
+    <select id="queryByIdWithSeckill" resultType="SuccessKilled">
         <!-- 根据id查询SuccessKilled并携带Seckill实体 -->
         <!-- 如何告诉mybatis把结果映射到SuccessKilled同时映射到seckill属性 -->
         <!-- 可以自由控制SQL -->
         select
           sk.seckill_id,sk.user_phone,sk.create_time,sk.state,
-          s.seckill_id "secKill.secKill_id",s.name "secKill.name",
-          s.start_time "secKill.start_time",s.end_time "secKill.end_time",
-          s.create_time "secKill.create_time"
+          s.seckill_id "seckill.seckill_id",s.name "seckill.name",
+          s.start_time "seckill.start_time",s.end_time "seckill.end_time",
+          s.create_time "seckill.create_time"
 
         from success_killed sk inner join seckill s on sk.seckill_id = s.seckill_id
-        where sk.seckill_id = #{secKillId} and sk.user_phone = #{userPhone}
+        where sk.seckill_id = #{seckillId} and sk.user_phone = #{userPhone}
     </select>
 </mapper>

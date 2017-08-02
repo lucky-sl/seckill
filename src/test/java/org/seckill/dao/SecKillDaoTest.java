@@ -2,7 +2,7 @@ package org.seckill.dao;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.seckill.entity.SecKill;
+import org.seckill.entity.Seckill;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -20,12 +20,12 @@ import java.util.List;
 public class SecKillDaoTest {
     //注入Dao实现类
     @Resource
-    private SecKillDao secKillDao;
+    private SeckillDao seckillDao;
 
     @Test
     public void queryById() throws Exception {
         long id = 1000;
-        SecKill secKill = secKillDao.queryById(id);
+        Seckill secKill = seckillDao.queryById(id);
         System.out.println(secKill.getName());
         System.out.println(secKill);
     }
@@ -39,8 +39,8 @@ public class SecKillDaoTest {
 
     @Test
     public void queryAll() throws Exception {
-        List<SecKill> secKills = secKillDao.queryAll(0,100);
-        for(SecKill secKill:secKills){
+        List<Seckill> secKills = seckillDao.queryAll(0,100);
+        for(Seckill secKill:secKills){
             System.out.println(secKill.toString());
         }
     }
@@ -48,7 +48,7 @@ public class SecKillDaoTest {
     @Test
     public void reduceNumber() throws Exception {
         Date killTime = new Date();
-        int updateCount = secKillDao.reduceNumber(1000L,killTime);
+        int updateCount = seckillDao.reduceNumber(1000L,killTime);
         System.out.println("updateCount="+updateCount);
     }
 

@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
 public class SuccessKilledDaoTest {
 
     @Resource
-    private SuccessKilledDao successKilledDao;
+    private SuccesskilledDao successKilledDao;
 
     @Test
     public void insertSuccessKilled() throws Exception {
@@ -32,9 +32,9 @@ public class SuccessKilledDaoTest {
     public void queryByIdWithSecKill() throws Exception {
         long id = 1001L;
         long phone = 13161850425L;
-        SuccessKilled successKilled = successKilledDao.queryByIdWithSecKill(id,phone);
+        SuccessKilled successKilled = successKilledDao.queryByIdWithSeckill(id,phone);
         System.out.println(successKilled);
-        System.out.println(successKilled.getSecKill());
+        System.out.println(successKilled.getSeckillId());
     }
 
 

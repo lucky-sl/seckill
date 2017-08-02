@@ -5,9 +5,9 @@ import java.util.Date;
 /**
  * Created by s on 2017/7/6.
  */
-public class SecKill {
+public class Seckill {
 
-    private long secKillId;
+    private long seckillId;
 
     private String name;
 
@@ -19,12 +19,12 @@ public class SecKill {
 
     private Date createTime;
 
-    public long getSecKillId() {
-        return secKillId;
+    public long getseckillId() {
+        return seckillId;
     }
 
-    public void setSecKillId(long secKillId) {
-        this.secKillId = secKillId;
+    public void setseckillId(long seckillId) {
+        this.seckillId = seckillId;
     }
 
     public String getName() {
@@ -69,8 +69,8 @@ public class SecKill {
 
     @Override
     public String toString() {
-        return "SecKill{" +
-                "secKillId=" + secKillId +
+        return "seckill{" +
+                "seckillId=" + seckillId +
                 ", name='" + name + '\'' +
                 ", number=" + number +
                 ", startTime=" + startTime +

@@ -7,7 +7,7 @@ import java.util.Date;
  */
 public class SuccessKilled {
 
-    private long secKillId;
+    private long seckillId;
 
     private long userPhone;
 
@@ -15,14 +15,14 @@ public class SuccessKilled {
 
     private Date createTime;
 
-    private SecKill secKill;
+    private Seckill seckill;
 
-    public long getSecKillId() {
-        return secKillId;
+    public long getSeckillId() {
+        return seckillId;
     }
 
-    public void setSecKillId(long secKillId) {
-        this.secKillId = secKillId;
+    public void setSeckillId(long seckillId) {
+        this.seckillId = seckillId;
     }
 
     public long getUserPhone() {
@@ -49,22 +49,22 @@ public class SuccessKilled {
         this.createTime = createTime;
     }
 
-    public SecKill getSecKill() {
-        return secKill;
+    public Seckill getSecKill() {
+        return seckill;
     }
 
-    public void setSecKill(SecKill secKill) {
-        this.secKill = secKill;
+    public void setSecKill(Seckill seckill) {
+        this.seckill = seckill;
     }
 
     @Override
     public String toString() {
         return "SuccessKilled{" +
-                "secKillId=" + secKillId +
+                "seckillId=" + seckillId +
                 ", userPhone=" + userPhone +
                 ", state=" + state +
                 ", createTime=" + createTime +
-                ", secKill=" + secKill +
+                ", seckill=" + seckill +
                 '}';
     }
 }

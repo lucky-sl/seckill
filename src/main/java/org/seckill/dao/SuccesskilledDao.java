@@ -6,22 +6,22 @@ import org.seckill.entity.SuccessKilled;
 /**
  * Created by s on 2017/7/6.
  */
-public interface SuccessKilledDao {
+public interface SuccesskilledDao {
 
     /**
      * 插入购买明细，可过滤重复
-     * @param secKillId
+     * @param seckillId
      * @param userPhone
      * @return
      */
 
-    int insertSuccessKilled(@Param("secKillId") long secKillId,@Param("userPhone") long userPhone);
+    int insertSuccessKilled(@Param("seckillId") long seckillId,@Param("userPhone") long userPhone);
 
     /**
      * 根据id查询SuccessKilled并携带秒杀产品对象实体
-     * @param secKillId
+     * @param seckillId
      * @return
      */
-    SuccessKilled queryByIdWithSecKill(@Param("secKillId") long secKillId,@Param("userPhone") long userPhone);
+    SuccessKilled queryByIdWithSeckill(@Param("seckillId") long seckillId,@Param("userPhone") long userPhone);
 
 }
